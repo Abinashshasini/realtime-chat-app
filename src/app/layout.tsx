@@ -1,5 +1,6 @@
 import './globals.css';
 import { Source_Sans_Pro } from 'next/font/google';
+import Providers from '@/components/Providers';
 
 const sansPro = Source_Sans_Pro({
   weight: ['200', '300', '400', '600', '700'],
@@ -18,7 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={sansPro.className}>{children}</body>
+      <body className={sansPro.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
